@@ -24,7 +24,6 @@ public class 问题3_变形词问题 {
 			}
 			help[sp.charAt(i)]--;
 		}
-		
 		return true;
 	}
 
