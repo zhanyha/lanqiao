@@ -29,6 +29,18 @@ public class Utils {
 		}
 		System.out.println();
 	}
+	public static void print(char[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i]+" ");
+		}
+		System.out.println();
+	}
+	public static void print(String[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i]+" ");
+		}
+		System.out.println();
+	}
 	/**
 	 * 生成一个长度为len的随机数组
 	 * @param len

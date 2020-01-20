@@ -1,6 +1,12 @@
+package com.zyh.lanqiao.math;
 
 import java.util.*;
-public class Main {
+/**
+ * 问题地址：https://vjudge.net/problem/POJ-1704
+ * @author zhanyuhao
+ *
+ */
+public class 阶梯nim问题 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
