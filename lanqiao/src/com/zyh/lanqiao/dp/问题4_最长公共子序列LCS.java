@@ -78,21 +78,6 @@ public class 问题4_最长公共子序列LCS {
 				sb.append(s2.charAt(0));
 			}
 		}
-//		if(i==0) {
-//			while(j>=0) {
-//				if (s1.charAt(i) == s2.charAt(j)) {
-//					sb.append(s2.charAt(i));
-//					j--;
-//				}
-//			}
-//		}else {//j==0
-//			while(i>=0) {
-//				if (s1.charAt(i) == s2.charAt(j)) {
-//					sb.append(s1.charAt(i));
-//					i--;
-//				}
-//			}
-//		}
 		return sb.reverse().toString();
 	}
 
