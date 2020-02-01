@@ -1,3 +1,5 @@
+package com.zyh.lanqiao.dp;
+
 import java.util.Scanner;
 
 /**
@@ -5,7 +7,7 @@ import java.util.Scanner;
  * @author zhanyuhao
  *
  */
-public class Main {
+public class 问题6_最长递增子序列 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
