@@ -1,12 +1,11 @@
 package com.zyh.lanqiao.math;
 
+import com.zyh.lanqiao.utils.Utils;
+
 public class Êý¾Ý {
 
 	public static void main(String[] args) {
-			System.out.println(10000);
-			for (int j = 1;j <= 10000; j++) {
-				System.out.println(j);
-			}
+			Utils.print(Utils.randomArray(0, 49, 50));
 	}
 
 }
