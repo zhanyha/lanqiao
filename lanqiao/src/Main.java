@@ -1,50 +1,17 @@
 import java.util.Scanner;
 
-/**
- * https://vjudge.net/problem/51Nod-1134
- * @author zhanyuhao
- *
- */
 public class Main {
 
+	/**
+	 * scanner的使用 接受从控制台输入的信息
+	 */
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int[] arr = new int[n];
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = sc.nextInt();
-		}
-		int max = solution(arr);
-		System.out.println(max);
-		sc.close();
-	}
+		Scanner input = new Scanner(System.in);
+		System.out.println("请输入您的姓名：");
+		String name = input.next();
+		System.out.println("请输入您的号码：");
+		int num = input.nextInt();
+		System.out.println(name + "您好！您的等待号码为：" + num);
 
-	private static int solution(int[] arr) {
-		int[] dp = new int[arr.length];
-		dp[0]=1;
-		int max = 0;
-		int flag = 0;
-		for (int i = 1; i < arr.length; i++) {
-			for (int j = 0; j < i; j++) {
-				if(arr[i]>arr[j] && dp[j]+1 > max) {
-					dp[i]=dp[j]+1;
-					max = dp[i];
-					flag = 1;
-				}
-			}
-			if(flag == 0) {
-				dp[i] = 1;
-			}
-			flag = 0;
-			max = 0;
-		}
-		max = 0;
-		for (int i = 0; i < dp.length; i++) {
-			if(max<dp[i]) {
-				max = dp[i];
-			}
-		}
-		return max;
 	}
-
 }
