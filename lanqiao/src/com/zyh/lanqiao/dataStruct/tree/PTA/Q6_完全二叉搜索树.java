@@ -17,6 +17,7 @@ public class Q6_ÍêÈ«¶ş²æËÑË÷Ê÷ {
             arr[i] = sc.nextInt();
         }
         Arrays.sort(arr);
+        System.out.println("idea");
         sc.close();
     }
 }
