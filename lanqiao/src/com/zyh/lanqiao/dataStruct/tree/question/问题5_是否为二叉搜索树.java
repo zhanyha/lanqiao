@@ -91,7 +91,23 @@ public class 问题5_是否为二叉搜索树 {
 		}
 		return true;
 	}
+	static int preValue=-999;//记录中序遍历每次访问的值
 	private static boolean isBST(Node root) {
+		if(root==null) return true;
+		isBST(root.left);
+		if(preValue<root.data) {
+			preValue = root.data;
+		}else {
+			return false;
+		}
+		return isBST(root.right);
+	}
+	/**
+	 * 这种算法是错的
+	 * @param root
+	 * @return
+	 */
+	/*private static boolean isBST(Node root) {
 		if(root==null) return true;
 		if(root.left!=null) {
 			if(root.left.data >= root.data) {
@@ -106,7 +122,7 @@ public class 问题5_是否为二叉搜索树 {
 			isBST(root.right);
 		}
 		return true;
-	}
+	}*/
 	private static Node create(Integer[] pre2, Integer[] in,int start,int end) {
 		if(flag == true) {
 			if(start > end) {
