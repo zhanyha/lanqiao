@@ -37,6 +37,8 @@ public class ¹ş·òÂüÊ÷ {
 			huffTree[s[0]].parent = i;
 			huffTree[s[1]].parent = i;
 		}
+		//µÃµ½huffman±àÂë
+		
 		sc.close();
 	}
 //8
