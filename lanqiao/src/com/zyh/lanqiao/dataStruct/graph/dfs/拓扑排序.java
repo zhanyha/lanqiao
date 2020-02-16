@@ -2,6 +2,7 @@ package com.zyh.lanqiao.dataStruct.graph.dfs;
 
 import java.util.Stack;
 
+
 public class 拓扑排序 {
     static String[] v = {"1", "2", "3", "4", "5", "6"};
     static int[][] graph = {
@@ -10,11 +11,10 @@ public class 拓扑排序 {
             {0, 0, 0, 1, 1, 0},
             {0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0},
     };
     static int[] visited = new int[v.length];
     static Stack<String> stk = new Stack<>();
-
     public static void main(String[] args) {
         for (int i = 0; i < v.length; i++) {
             if (visited[i] <= 0) {//节点没有被弹出
