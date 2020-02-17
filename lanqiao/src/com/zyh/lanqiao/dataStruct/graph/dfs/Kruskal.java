@@ -1,6 +1,6 @@
 package com.zyh.lanqiao.dataStruct.graph.dfs;
 
-import com.zyh.lanqiao.dataStruct.graph.Edge;
+import com.zyh.lanqiao.dataStruct.graph.store.Edge;
 import com.zyh.lanqiao.dataStruct.graph.unionFind.UFNode;
 import com.zyh.lanqiao.dataStruct.graph.unionFind.UnionFindSet;
 
