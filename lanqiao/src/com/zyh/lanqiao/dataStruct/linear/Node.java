@@ -1,4 +1,4 @@
-package com.zyh.lanqiao.dataStruct.linearStruct;
+package com.zyh.lanqiao.dataStruct.linear;
 
 public class Node {
 	int data;

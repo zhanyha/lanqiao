@@ -1,4 +1,4 @@
-package com.zyh.lanqiao.dataStruct.linearStruct;
+package com.zyh.lanqiao.dataStruct.linear;
 /**
  * 一串字符串用链表结果存储，试判断是否为回文串
  * @author zhanyuhao

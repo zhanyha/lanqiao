@@ -1,4 +1,4 @@
-package com.zyh.lanqiao.dataStruct.linearStruct;
+package com.zyh.lanqiao.dataStruct.linear;
 /**
  * {1,2,3}+{2,3,4} = {3,5,7}
  * {2,4,1,7,6}+{7,7,3,8,7} = {9,1,5,5,4,1}

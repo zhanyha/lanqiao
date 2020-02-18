@@ -1,4 +1,4 @@
-package com.zyh.lanqiao.dataStruct.linearStruct;
+package com.zyh.lanqiao.dataStruct.linear;
 
 
 public class 问题1_找到单链表的倒数第k个数 {

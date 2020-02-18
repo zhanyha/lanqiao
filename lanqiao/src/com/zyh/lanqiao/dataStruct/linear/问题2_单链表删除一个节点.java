@@ -1,4 +1,4 @@
-package com.zyh.lanqiao.dataStruct.linearStruct;
+package com.zyh.lanqiao.dataStruct.linear;
 /**
  * 因为无法访问删除节点的前一个节点，
  * 所以没有办法用一个pre取指向要删除节点的上一个节点.

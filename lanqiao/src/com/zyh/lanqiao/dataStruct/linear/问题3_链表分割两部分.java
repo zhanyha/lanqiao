@@ -1,4 +1,4 @@
-package com.zyh.lanqiao.dataStruct.linearStruct;
+package com.zyh.lanqiao.dataStruct.linear;
 /**
  * 单链表依据某个基准值，
  * 将小于的放在左边，将大于的放在右边（不能开辟新的空间）
