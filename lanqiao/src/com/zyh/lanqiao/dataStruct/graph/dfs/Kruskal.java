@@ -2,7 +2,7 @@ package com.zyh.lanqiao.dataStruct.graph.dfs;
 
 import com.zyh.lanqiao.dataStruct.graph.store.Edge;
 import com.zyh.lanqiao.dataStruct.graph.unionFind.UFNode;
-import com.zyh.lanqiao.dataStruct.graph.unionFind.UnionFindSet;
+import com.zyh.lanqiao.dataStruct.graph.unionFind.UnionFind;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ import java.util.*;
 public class Kruskal {
     static List<Edge<String>> eds = new ArrayList<>();
     static List<Edge<String>> T = new ArrayList<>();
-    static UnionFindSet uf = new UnionFindSet();
+    static UnionFind uf = new UnionFind();
     static Map<String,UFNode<String>> map = new HashMap<>();//让每一个字符对应节点都是同一个，因为不能一直new
     public static void main(String[] args) {
         Edge<String> e1 = new Edge<>("A","B",6);
@@ -64,7 +64,7 @@ public class Kruskal {
         UFNode start = map.get(e.start);
         UFNode end = map.get(e.end);
         System.out.println(uf.find(start)+" == "+uf.find(end));
-        if(uf.find(start) != UnionFindSet.find(end)){
+        if(uf.find(start) != UnionFind.find(end)){
             uf.union(start,end);
             return true;
         }

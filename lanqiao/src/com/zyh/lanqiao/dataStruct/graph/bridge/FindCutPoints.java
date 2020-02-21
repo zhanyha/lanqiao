@@ -6,18 +6,18 @@ import java.util.Scanner;
 import java.util.TreeSet;
 
 /**
- * @Description FindBridgeFromGragh——寻找桥的算法
+ * @Description FindBridgeFromGragh——寻找割点的算法
  * @Author zhanyuhao
  * @Date 2020/2/20 7:21
  **/
-public class FindBridgeFromGragh {
+public class FindCutPoints {
     private TreeSet<Integer>[] treeSet;
     private boolean[] visited;
     private int[] ord;//代表顶点被访问到的次序
     private int[] low;//代表该顶点v不走回头路所能到达的被访问最小次序low[v]的那个顶点
     private int k=-1;
-    private ArrayList<Integer> bridge = new ArrayList<Integer>();
-    public FindBridgeFromGragh(Scanner sc){
+    private ArrayList<Integer> cutpoints = new ArrayList<Integer>();
+    public FindCutPoints(Scanner sc){
         int v = sc.nextInt();
         int e = sc.nextInt();
         treeSet = new TreeSet[v];
@@ -34,7 +34,7 @@ public class FindBridgeFromGragh {
             treeSet[b].add(a);
         }
         for (int w = 0; w < v; w++) 
-        	if(!visited[v])
+        	if(!visited[w])
         		dfs(w,w);
     }
 
@@ -42,12 +42,17 @@ public class FindBridgeFromGragh {
         visited[v] = true;
         ord[v] = ++k;
         low[v] = k;
+        int child =0;
         for (int w : adj(v))
             if(!visited[w]) {
                 dfs(w, v);
                 low[v] = Math.min(low[w],low[v]);
-                if(low[w] > ord[v]){
-                    bridge.add(v*10+w);
+                if(v!=parent && low[w] >= ord[v]){
+                    cutpoints.add(v);
+                }
+                child++;
+                if(v == parent && child > 1) {
+                	cutpoints.add(v);
                 }
             }else if(w!=parent) {
                 low[v] = Math.min(low[w],low[v]);
@@ -56,14 +61,14 @@ public class FindBridgeFromGragh {
 
 
     public ArrayList<Integer> getBridge(){
-        return bridge;
+        return cutpoints;
     }
     public Iterable<Integer> adj(int i){
         return treeSet[i];
     }
 
     public static void main(String[] args) {
-        FindBridgeFromGragh bridgeFromGragh = new FindBridgeFromGragh(new Scanner(System.in));
-        System.out.println(bridgeFromGragh.getBridge());
+        FindCutPoints findPoints = new FindCutPoints(new Scanner(System.in));
+        System.out.println(findPoints.getBridge());
     }
 }

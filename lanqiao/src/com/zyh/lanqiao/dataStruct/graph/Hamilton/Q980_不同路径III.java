@@ -1,4 +1,6 @@
-class Solution {
+package com.zyh.lanqiao.dataStruct.graph.Hamilton;
+
+public class Q980_²»Í¬Â·¾¶III {
 	private int[][] dirs = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
 	private int[][] grid;
 	private int R;
