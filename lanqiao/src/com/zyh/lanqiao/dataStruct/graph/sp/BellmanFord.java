@@ -3,14 +3,15 @@ package com.zyh.lanqiao.dataStruct.graph.sp;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import com.zyh.lanqiao.dataStruct.graph.store.Graph;
+import com.zyh.lanqiao.dataStruct.graph.store.WeightedGraph;
+
 
 public class BellmanFord {
 	private int V;
 	private int E;
 	private int[] dis;
 	private boolean hasNegativeCycle = false;
-	public BellmanFord(Graph g, int s) {
+	public BellmanFord(WeightedGraph g, int s) {
 		this.V = g.V();
 		this.E = g.E();
 		dis = new int[V];
@@ -49,7 +50,7 @@ public class BellmanFord {
 		return -1;
 	}
 	public static void main(String[] args) {
-		Graph g =new Graph(new Scanner(System.in));
+		WeightedGraph g =new WeightedGraph(new Scanner(System.in));
 		BellmanFord bf = new BellmanFord(g, 0);
 		for(int v=0;v<g.V();v++) {
 			System.out.print(bf.pathTo(v)+" ");

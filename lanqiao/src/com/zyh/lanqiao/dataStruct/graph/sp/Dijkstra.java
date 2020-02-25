@@ -1,16 +1,16 @@
 package com.zyh.lanqiao.dataStruct.graph.sp;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
-import com.zyh.lanqiao.dataStruct.graph.store.Graph;
+import com.zyh.lanqiao.dataStruct.graph.store.WeightedGraph;
+
 
 public class Dijkstra {
 	private int s;// 源,Dijkstra是一种单源最短路径算法
 	private int[] dis;
 	private boolean[] visited;// 记录从源s出发到某个顶点的最小值已经确定了。
 
-	public Dijkstra(Graph g, int s) {
+	public Dijkstra(WeightedGraph g, int s) {
 		int V = g.V();
 		int E = g.E();
 		dis = new int[V];
@@ -47,7 +47,7 @@ public class Dijkstra {
 		return dis;
 	}
 	public static void main(String[] args) {
-		Graph g = new Graph(new Scanner(System.in));
+		WeightedGraph g = new WeightedGraph(new Scanner(System.in));
 		Dijkstra dijkstra = new Dijkstra(g, 0);
 		int[] pathTo = dijkstra.pathTo();
 		for(int i=0;i<g.V();i++) {

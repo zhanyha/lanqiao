@@ -5,7 +5,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 
-import com.zyh.lanqiao.dataStruct.graph.store.Graph;
+import com.zyh.lanqiao.dataStruct.graph.store.WeightedGraph;
+
 /**
  * 对于Dijkstra算法可以优化的地方在于每次求最小权的路径，如果使用
  * 一个优先队列来维护的话，将会降低求最小权路径的复杂度，提高算法性能
@@ -31,7 +32,7 @@ public class Dijkstra02 {
 		
 		
 	}
-	public Dijkstra02(Graph g, int s) {
+	public Dijkstra02(WeightedGraph g, int s) {
 		int V = g.V();
 		int E = g.E();
 		dis = new int[V];
@@ -64,7 +65,7 @@ public class Dijkstra02 {
 		return dis;
 	}
 	public static void main(String[] args) {
-		Graph g = new Graph(new Scanner(System.in));
+		WeightedGraph g = new WeightedGraph(new Scanner(System.in));
 		Dijkstra02 dijkstra = new Dijkstra02(g, 0);
 		int[] pathTo = dijkstra.pathTo();
 		for(int i=0;i<g.V();i++) {

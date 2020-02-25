@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-import com.zyh.lanqiao.dataStruct.graph.store.Graph;
+import com.zyh.lanqiao.dataStruct.graph.store.WeightedGraph;
+
 
 public class BellmanFord02 {
 	private int V;
@@ -14,7 +15,7 @@ public class BellmanFord02 {
 	private int s;
 	private boolean hasNegativeCycle = false;
 	private int[] pre;
-	public BellmanFord02(Graph g, int s) {
+	public BellmanFord02(WeightedGraph g, int s) {
 		this.V = g.V();
 		this.E = g.E();
 		this.s = s;
@@ -68,7 +69,7 @@ public class BellmanFord02 {
 		return res;
 	}
 	public static void main(String[] args) {
-		Graph g =new Graph(new Scanner(System.in));
+		WeightedGraph g =new WeightedGraph(new Scanner(System.in));
 		BellmanFord02 bf = new BellmanFord02(g, 0);
 		if(!bf.hasNegativeCycle) {
 			for (int v = 0; v < g.V(); v++) {
