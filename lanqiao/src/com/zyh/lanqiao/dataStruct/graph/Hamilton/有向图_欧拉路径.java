@@ -1,8 +1,10 @@
 package com.zyh.lanqiao.dataStruct.graph.Hamilton;
 
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Stack;
 
+import com.zyh.lanqiao.dataStruct.graph.store.DirectedWeightedGraph;
 import com.zyh.lanqiao.dataStruct.graph.store.Graph;
 
 /**
@@ -15,28 +17,29 @@ import com.zyh.lanqiao.dataStruct.graph.store.Graph;
 public class 有向图_欧拉路径 {
 	private int V;
 	private int E;
-	private Graph g;
+	private DirectedWeightedGraph g;
 	private Stack<Integer> curPath = new Stack<Integer>();
 	private Stack<Integer> res = new Stack<Integer>();
 	private boolean hasEulerLoop = false;
 
-	public 有向图_欧拉路径(Graph g,int start) {
+	public 有向图_欧拉路径(DirectedWeightedGraph g,int start) {
 		this.V = g.V();
 		this.E = g.E();
 		this.g = g;
 		int cur = start;
 		curPath.push(cur);
 		while (!curPath.isEmpty()) {
-			if(g.degree(cur)!=0) {
+			if(g.outdegree(cur)!=0) {
 				curPath.push(cur);
 				int w = g.adj(cur).iterator().next();
-				g.removeEdge(w, cur);
+				g.removeEdge(cur, w);
 				cur = w;
 			}else {
 				res.add(cur);
 				cur = curPath.pop();
 			}
 		}
+		Collections.reverse(res);
 	}
 
 	public Stack<Integer> result() {
@@ -44,8 +47,8 @@ public class 有向图_欧拉路径 {
 	}
 
 	public static void main(String[] args) {
-		Graph g = new Graph(new Scanner(System.in));
-		有向图_欧拉路径 o = new 有向图_欧拉路径(g,0);
+		DirectedWeightedGraph g = new DirectedWeightedGraph(new Scanner(System.in));
+		有向图_欧拉路径 o = new 有向图_欧拉路径(g,2);
 		System.out.println(o.result());
 	}
 }

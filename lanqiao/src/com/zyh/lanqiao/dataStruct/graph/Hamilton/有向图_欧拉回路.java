@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.util.Stack;
 
-import com.zyh.lanqiao.dataStruct.graph.store.DirectedGraph;
+import com.zyh.lanqiao.dataStruct.graph.store.DirectedWeightedGraph;
 
 
 /**
@@ -18,12 +18,12 @@ import com.zyh.lanqiao.dataStruct.graph.store.DirectedGraph;
 public class 有向图_欧拉回路 {
 	private int V;
 	private int E;
-	private DirectedGraph g;
+	private DirectedWeightedGraph g;
 	private Stack<Integer> curPath = new Stack<Integer>();
 	private ArrayList<Integer> res = new ArrayList<Integer>();
 	private boolean hasEulerLoop = false;
 
-	public 有向图_欧拉回路(DirectedGraph g) {
+	public 有向图_欧拉回路(DirectedWeightedGraph g) {
 		this.V = g.V();
 		this.E = g.E();
 		this.g = g;
@@ -54,7 +54,7 @@ public class 有向图_欧拉回路 {
 	}
 	
 	public static void main(String[] args) {
-		DirectedGraph g = new DirectedGraph(new Scanner(System.in));
+		DirectedWeightedGraph g = new DirectedWeightedGraph(new Scanner(System.in));
 		有向图_欧拉回路 o = new 有向图_欧拉回路(g);
 		System.out.println(o.result());
 	}

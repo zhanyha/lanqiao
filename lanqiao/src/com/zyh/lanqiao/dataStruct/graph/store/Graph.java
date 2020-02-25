@@ -2,27 +2,28 @@ package com.zyh.lanqiao.dataStruct.graph.store;
 
 import java.util.Scanner;
 import java.util.TreeSet;
-
-public class DirectedGraph implements Cloneable {
+/**
+ * 无向无权图的存储
+* @author zhanyuhao
+* @version 创建时间：2020年2月25日 下午4:46:03
+* 类说明
+ */
+public class Graph implements Cloneable {
 	private int V;
 	private int E;
 	private TreeSet<Integer>[] treeSet;
-	private int[] indegrees;
-	private int[] outdegrees;
-	public DirectedGraph(Scanner sc) {
+
+	public Graph(Scanner sc) {
 		this.V = sc.nextInt();
 		this.E = sc.nextInt();
 		treeSet = new TreeSet[V];
-		indegrees = new int[V];
-		outdegrees = new int[V];
 		for (int i = 0; i < V; i++)
 			treeSet[i] = new TreeSet<Integer>();
 		for (int i = 0; i < E; i++) {
 			int a = sc.nextInt();
 			int b = sc.nextInt();
 			treeSet[a].add(b);
-			indegrees[b]++;
-			outdegrees[a]++;
+			treeSet[b].add(a);
 		}
 	}
 
@@ -33,16 +34,14 @@ public class DirectedGraph implements Cloneable {
 	public int E() {
 		return E;
 	}
-	public int indegree(int v) {
-		return indegrees[v];
-	}
-	public int outdegree(int v) {
-		return outdegrees[v];
-	}
+
 	public boolean hasEdge(int v1, int v2) {
 		return treeSet[v1].contains(v2);
 	}
-	
+
+	public int degree(int v) {
+		return treeSet[v].size();
+	}
 
 	/**
 	 * @param v
@@ -54,15 +53,14 @@ public class DirectedGraph implements Cloneable {
 
 	public void removeEdge(int v, int w) {
 		treeSet[v].remove(w);
-		indegrees[w]--;
-		outdegrees[v]--;
+		treeSet[w].remove(v);
 	}
 
 	@Override
 	public Object clone() {
-		DirectedGraph g = null;
+		Graph g = null;
 		try {
-			g = (DirectedGraph) super.clone();
+			g = (Graph) super.clone();
 			g.treeSet = new TreeSet[g.V];
 			for (int v = 0; v < V; v++) {
 				g.treeSet[v] = new TreeSet<Integer>();
@@ -92,9 +90,9 @@ public class DirectedGraph implements Cloneable {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		DirectedGraph g = new DirectedGraph(sc);
+		Graph g = new Graph(sc);
 		System.out.println(g);
-		System.out.println(g.adj(1));
-		System.out.println(g.hasEdge(1, 3));
+		System.out.println(g.adj(2));
+		System.out.println(g.hasEdge(2, 3));
 	}
 }

@@ -3,7 +3,12 @@ package com.zyh.lanqiao.dataStruct.graph.store;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.TreeMap;
-
+/**
+ * 无向带权图的存储
+* @author zhanyuhao
+* @version 创建时间：2020年2月25日 下午4:46:26
+* 类说明
+ */
 public class WeightedGraph {
 	private int V;
 	private int E;
