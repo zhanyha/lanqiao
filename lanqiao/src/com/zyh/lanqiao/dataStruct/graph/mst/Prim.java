@@ -29,7 +29,7 @@ public class Prim {
 		}
 		// 下面的逻辑是Prim算法的思想
 //		visited[0] = true;
-//		for (int i = 1; i < V; i++) {
+//		for (int i = 1; i < V; i++) {//进行v-1次选择
 //			WeightedEdge min = new WeightedEdge(-1, -1, Integer.MAX_VALUE);
 //			for (int v = 0; v < V; v++) {// 对于每一个顶点v,找到最短的横切边
 //				if (visited[v]) {

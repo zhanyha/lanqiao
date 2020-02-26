@@ -95,11 +95,11 @@ public class DirectedWeightedGraph {
 		return sb.toString();
 	}
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		DirectedWeightedGraph g = new DirectedWeightedGraph(sc);
-		System.out.println(g);
-		System.out.println(g.adj(1));
-		System.out.println(g.hasEdge(3, 5));
-	}
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		DirectedWeightedGraph g = new DirectedWeightedGraph(sc);
+//		System.out.println(g);
+//		System.out.println(g.adj(1));
+//		System.out.println(g.hasEdge(3, 5));
+//	}
 }

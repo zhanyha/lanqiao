@@ -96,7 +96,7 @@ public class MaxFlow {
 	public static void main(String[] args) {
 		DirectedWeightedGraph g = new DirectedWeightedGraph(new Scanner(System.in));
 		int s =0;
-		int t= 5;
+		int t= 10;
 		MaxFlow flow = new MaxFlow(g, s, t);
 		System.out.println(flow.result());
 		for(int v=0;v<g.V();v++) {
