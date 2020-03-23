@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d9598e-5e09-45dc-8685-331d87755482" name="Default Changelist" comment="删除测试文件a.txt">
-      <change afterPath="$PROJECT_DIR$/baseball.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/match/Bipartite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/match/Hugarian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/match/HugarianDFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/question/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/question/PTA_哥尼斯堡的七桥问题.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/question/PTA_点亮地下通道.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/HS/EightCodeBFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/HS/EightCodeHS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/segmentTree/Merger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/segmentTree/SegmentTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/g3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/g3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/networkFlow/MaxFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/networkFlow/MaxFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/store/DirectedWeightedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/store/DirectedWeightedGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zyh/lanqiao/math/快速幂运算.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/math/快速幂运算.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,22 +69,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="二分图 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.二分图" />
-      <module name="lanqiao" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zyh.lanqiao.dataStruct.graph.dfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="二分图" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.二分图" />
+  <component name="RunManager" selected="Application.Solution">
+    <configuration name="欧拉道路" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.欧拉道路" />
       <module name="lanqiao" />
       <extension name="coverage">
         <pattern>
@@ -133,15 +116,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="欧拉道路" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.欧拉道路" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="lanqiao" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zyh.lanqiao.dataStruct.graph.dfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.FindBridgeFromGragh" />
         <item itemvalue="Application.图的最短路径_Dijkstra" />
         <item itemvalue="Application.BellmanFord" />
-        <item itemvalue="Application.二分图 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +196,34 @@
       <workItem from="1582154257708" duration="5601000" />
       <workItem from="1582596453280" duration="125000" />
       <workItem from="1582643326518" duration="5097000" />
+      <workItem from="1582879170821" duration="519000" />
+      <workItem from="1583303591591" duration="8112000" />
+      <workItem from="1583311813048" duration="50000" />
+      <workItem from="1583313210233" duration="19958000" />
+      <workItem from="1583340421932" duration="4707000" />
+      <workItem from="1583394332244" duration="10856000" />
+      <workItem from="1583471650103" duration="17983000" />
+      <workItem from="1583490659421" duration="11308000" />
+      <workItem from="1583509965235" duration="65000" />
+      <workItem from="1583549815040" duration="7139000" />
+      <workItem from="1583751590773" duration="535000" />
+      <workItem from="1584084904317" duration="20000" />
+      <workItem from="1584086517286" duration="10409000" />
+      <workItem from="1584185940904" duration="11516000" />
+      <workItem from="1584255368519" duration="2415000" />
+      <workItem from="1584285028345" duration="2349000" />
+      <workItem from="1584334248498" duration="982000" />
+      <workItem from="1584371215609" duration="2588000" />
+      <workItem from="1584418839287" duration="3696000" />
+      <workItem from="1584424995314" duration="8755000" />
+      <workItem from="1584506135115" duration="4017000" />
+      <workItem from="1584602394303" duration="8742000" />
+      <workItem from="1584678758418" duration="4072000" />
+      <workItem from="1584715600533" duration="8123000" />
+      <workItem from="1584763413291" duration="5155000" />
+      <workItem from="1584851896387" duration="1651000" />
+      <workItem from="1584866863445" duration="5704000" />
+      <workItem from="1584937309638" duration="2528000" />
     </task>
     <task id="LOCAL-00001" summary="修改1">
       <created>1581518250953</created>
@@ -355,9 +360,9 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/src/Solution.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,60 +1,35 @@
 class Solution {
-	private int[][] dirs = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
-	private int[][] grid;
-	private int R;
-	private int C;
-	private boolean[][] visited;
-	private int start;
-	private int end;
-	private int left;
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
 
-	public int uniquePathsIII(int[][] grid) {
-		this.grid = grid;
-		R = grid.length;
-		C = grid[0].length;
-		visited = new boolean[R][C];
-		left = R * C;
-		for (int i = 0; i < R; i++) {
-			for (int j = 0; j < C; j++) {
-				if (grid[i][j] == 1) {
-					start = i * C + j;
-					grid[i][j] = 0;
-				} else if (grid[i][j] == 2) {
-					end = i * C + j;
-					grid[i][j] = 0;
-				} else if (grid[i][j] == -1) {
-					left--;
-				}
-			}
-		}
-		return dfs(start, left);
-	}
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1);
+        ListNode h1 = new ListNode(2);
+        ListNode h2 = new ListNode(3);
+        ListNode h3 = new ListNode(4);
+        ListNode h4 = new ListNode(5);
+        ListNode h5 = new ListNode(6);
+        head.next = h1;
+        h1.next = h2;
+        h2.next = h3;
+        h3.next = h4;
+        h4.next = h5;
+        System.out.println(new Solution().middleNode(head).val);
+    }
+}
 
-	private int dfs(int v, int left2) {
-		int res=0;
-		int x = v / C;
-		int y = v % C;
-		visited[x][y] = true;
-		left2--;
-		if (v == end) {
-			if(left2==0)
-				return 1;
-			else
-				return 0;
-		}
-		for (int d = 0; d < 4; d++) {
-			int nextx = x + dirs[d][0];
-			int nexty = y + dirs[d][1];
-			if (inArea(nextx, nexty) && !visited[nextx][nexty] && grid[nextx][nexty] != -1) {
-				res+=dfs(nextx * C + nexty, left2);
-				visited[nextx][nexty] = false;
-			}
-		}
-		
-		return res;
-	}
+class ListNode {
+    int val;
+    ListNode next;
 
-	private boolean inArea(int nextx, int nexty) {
-		return nextx >= 0 && nextx < R && nexty >= 0 && nexty < C;
-	}
+    ListNode(int x) {
+        val = x;
+    }
 }

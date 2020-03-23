@@ -12,17 +12,27 @@ public class ¿ìËÙÃİÔËËã {
 		System.out.println(res);
 		sc.close();
 	}
-
-	private static  int quickExp(int n, int m) {
-		if(m == 1)
-			return n;
-		int tmp = n;
-		int e = 1;
-		while( (e<<1) <m) {
-			tmp = tmp * tmp;
-			e = e << 1;
+	public static int quickExp(int n,int m) {
+		int res = 1;
+		while(m > 0) {
+			if((m&1)==1) {
+				res *= n;
+			}
+			n =  n*n;
+			m = m>>1;
 		}
-		return tmp * quickExp(n, m-e);
+		return res;
 	}
+//	private static  int quickExp(int n, int m) {
+//		if(m == 1)
+//			return n;
+//		int tmp = n;
+//		int e = 1;
+//		while( (e<<1) <m) {
+//			tmp = tmp * tmp;
+//			e = e << 1;
+//		}
+//		return tmp * quickExp(n, m-e);
+//	}
 
 }
