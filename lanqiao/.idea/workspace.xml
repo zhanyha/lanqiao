@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d9598e-5e09-45dc-8685-331d87755482" name="Default Changelist" comment="删除测试文件a.txt">
-      <change afterPath="$PROJECT_DIR$/a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/HS/EightCodeBFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/graph/HS/EightCodeHS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/segmentTree/Merger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/dataStruct/segmentTree/SegmentTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AI/AStar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AI/Coord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AI/MapInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AI/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zyh/lanqiao/math/快速幂运算.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zyh/lanqiao/math/快速幂运算.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -69,26 +67,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
-    <configuration name="欧拉道路" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.欧拉道路" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="拓扑排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.拓扑排序" />
       <module name="lanqiao" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zyh.lanqiao.dataStruct.graph.dfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BellmanFord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.bfs.图的最短路径_BellmanFord" />
-      <module name="lanqiao" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zyh.lanqiao.dataStruct.graph.bfs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,22 +101,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solution" />
+    <configuration name="MaxFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.networkFlow.MaxFlow" />
       <module name="lanqiao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zyh.lanqiao.dataStruct.graph.networkFlow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="拓扑排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zyh.lanqiao.dataStruct.graph.dfs.拓扑排序" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="lanqiao" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zyh.lanqiao.dataStruct.graph.dfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.MaxFlow" />
         <item itemvalue="Application.FindBridgeFromGragh" />
         <item itemvalue="Application.图的最短路径_Dijkstra" />
-        <item itemvalue="Application.BellmanFord" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +209,22 @@
       <workItem from="1584851896387" duration="1651000" />
       <workItem from="1584866863445" duration="5704000" />
       <workItem from="1584937309638" duration="2528000" />
+      <workItem from="1585024076621" duration="2145000" />
+      <workItem from="1585043693569" duration="5618000" />
+      <workItem from="1585109100452" duration="1637000" />
+      <workItem from="1585116348086" duration="5597000" />
+      <workItem from="1585131277188" duration="2018000" />
+      <workItem from="1585194023463" duration="5574000" />
+      <workItem from="1585275233777" duration="265000" />
+      <workItem from="1585278974092" duration="1143000" />
+      <workItem from="1585282717924" duration="6581000" />
+      <workItem from="1585322018691" duration="1724000" />
+      <workItem from="1585370622364" duration="1078000" />
+      <workItem from="1585385372437" duration="7043000" />
+      <workItem from="1585455482758" duration="2637000" />
+      <workItem from="1585491628612" duration="1691000" />
+      <workItem from="1585583209799" duration="88000" />
+      <workItem from="1585584329047" duration="885000" />
     </task>
     <task id="LOCAL-00001" summary="修改1">
       <created>1581518250953</created>
@@ -360,9 +361,14 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AI/AStar.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>2</line>
-          <option name="timeStamp" value="26" />
+          <line>19</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

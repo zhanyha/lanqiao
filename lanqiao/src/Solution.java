@@ -1,35 +1,77 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution {
-    public ListNode middleNode(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
+    int R;
+    int C;
+    int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+    boolean[][] visited;
+    int[][] depth;
+
+    public int maxDistance(int[][] grid) {
+        this.R = grid.length;
+        this.C = grid[0].length;
+        if (check(grid, R, C)) {
+            return -1;
         }
-        return slow;
+        depth = new int[R][C];
+        for (int i = 0; i < R; i++) {
+            for (int j = 0; j < C; j++) {
+                if (grid[i][j] == 1) {
+                    visited = new boolean[R][C];
+                    bfs(grid, i, j);
+                }
+            }
+        }
+        int max = 0;
+        for (int i = 0; i < R; i++) {
+            for (int j = 0; j < C; j++) {
+                max = Math.max(max,depth[i][j]);
+            }
+        }
+        return max;
+    }
+
+    private void bfs(int[][] grid, int x, int y) {
+        visited[x][y] = true;
+        Queue<Integer> que = new LinkedList<>();
+        que.add(x * C + y);
+        while (!que.isEmpty()) {
+            int poll = que.remove();
+            x = poll / C;
+            y = poll % C;
+            for (int d = 0; d < 4; d++) {
+                int nextx = x + dirs[d][0];
+                int nexty = y + dirs[d][1];
+                if (inArea(nextx, nexty) && grid[nextx][nexty] == 0 && !visited[nextx][nexty]) {
+                    visited[nextx][nexty] = true;
+                    depth[nextx][nexty] = Math.min(depth[nextx][nexty] == 0 ? 9999 : depth[nextx][nexty], depth[x][y] + 1);
+                    que.add(nextx * C + nexty);
+                }
+            }
+        }
+    }
+
+    private boolean inArea(int nextx, int nexty) {
+        return nextx >= 0 && nextx < R && nexty >= 0 && nexty < C;
+    }
+
+    private boolean check(int[][] grid, int r, int c) {
+        int zeroCount = 0;
+        int oneCount = 0;
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                if (grid[i][j] == 0) {
+                    zeroCount++;
+                } else
+                    oneCount++;
+            }
+        }
+        return zeroCount == 0 || oneCount == 0;
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        ListNode h1 = new ListNode(2);
-        ListNode h2 = new ListNode(3);
-        ListNode h3 = new ListNode(4);
-        ListNode h4 = new ListNode(5);
-        ListNode h5 = new ListNode(6);
-        head.next = h1;
-        h1.next = h2;
-        h2.next = h3;
-        h3.next = h4;
-        h4.next = h5;
-        System.out.println(new Solution().middleNode(head).val);
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
+        int[][] gird = {{1, 0, 1}, {0, 0, 1}, {1, 0, 0}};
+        System.out.println(new Solution().maxDistance(gird));
     }
 }
